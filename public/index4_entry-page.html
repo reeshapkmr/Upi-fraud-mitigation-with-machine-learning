@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Mitigation Entry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: url('../templates/index4.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Times New Roman', serif;
+        }
+
+        /* Form container styles */
+        #formContainer {
+            border: 2px solid white; /* White border initially */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+
+        /* Input field styles */
+        .input-field {
+            border: 2px solid white; /* White border initially */
+            transition: border-color 0.3s, color 0.3s; /* Smooth transition for border and text color */
+            color: white; /* Default text color */
+        }
+
+        .input-field.valid {
+            border-color: #FFD700; /* Golden border when valid */
+            color: #FFD700; /* Change text color to golden when valid */
+        }
+
+        .form-text {
+            color: white; /* Default text color for labels and other text */
+            transition: color 0.3s; /* Smooth transition for text color */
+        }
+
+        .form-text.valid {
+            color: #FFD700; /* Change text color to golden when valid */
+        }
+
+        .icon-golden {
+            color: #FFD700; /* Golden color for icons */
+        }
+
+        #submitBtn {
+            background-color: gray; /* Default gray background */
+            color: white; /* Default white text */
+            cursor: not-allowed; /* Default cursor */
+            border: 2px solid white; /* White border initially */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+
+        #submitBtn.valid {
+            background-color: white; /* Change to white background when valid */
+            color: #FFD700; /* Change text color to golden when valid */
+            cursor: pointer; /* Change cursor to pointer when valid */
+            border-color: #FFD700; /* Change border color to golden when valid */
+        }
+
+        #formContainer.valid {
+            border-color: #FFD700; /* Change form border color to golden when valid */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-black">
+    <div id="formContainer" class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-2 w-96">
+        <h2 class="text-2xl font-bold text-white text-center mb-6 form-text">Transaction Details</h2>
+        <form id="transactionForm">
+            <!-- Recipient Name -->
+            <div class="mb-4">
+                <label class="block mb-2 form-text" for="recipient">Recipient Name</label>
+                <div class="relative">
+                    <input id="recipient" class="w-full px-4 py-2 rounded-full bg-white bg-opacity-20 text-white placeholder-white focus:outline-none input-field" type="text" placeholder="Enter Recipient Name">
+                    <i class="fas fa-user-check absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <!-- Transaction ID -->
+            <div class="mb-4">
+                <label class="block mb-2 form-text" for="transactionId">Transaction ID</label>
+                <div class="relative">
+                    <input id="transactionId" class="w-full px-4 py-2 rounded-full bg-white bg-opacity-20 text-white placeholder-white focus:outline-none input-field" type="text" placeholder="Enter Transaction ID">
+                    <i class="fas fa-id-card absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <!-- Amount -->
+            <div class="mb-4">
+                <label class="block mb-2 form-text" for="amount">Amount</label>
+                <div class="relative">
+                    <input id="amount" class="w-full px-4 py-2 rounded-full bg-white bg-opacity-20 text-white placeholder-white focus:outline-none input-field" type="number" placeholder="Enter Amount">
+                    <i class="fas fa-dollar-sign absolute right-3 top-3 text-white"></i </div>
+            </div>
+            <!-- Old Balance -->
+            <div class="mb-4">
+                <label class="block mb-2 form-text" for="oldBalance">Old Balance</label>
+                <div class="relative">
+                    <input id="oldBalance" class="w-full px-4 py-2 rounded-full bg-white bg-opacity-20 text-white placeholder-white focus:outline-none input-field" type="number" placeholder="Enter Old Balance">
+                    <i class="fas fa-dollar-sign absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <!-- New Balance -->
+            <div class="mb-4">
+                <label class="block mb-2 form-text" for="newBalance">New Balance</label>
+                <div class="relative">
+                    <input id="newBalance" class="w-full px-4 py-2 rounded-full bg-white bg-opacity-20 text-white placeholder-white focus:outline-none input-field" type="number" placeholder="Enter New Balance">
+                    <i class="fas fa-dollar-sign absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <!-- Platform -->
+            <div class="mb-4">
+                <label class="block mb-2 form-text" for="platform">Platform</label>
+                <div class="relative">
+                    <input id="platform" class="w-full px-4 py-2 rounded-full bg-white bg-opacity-20 text-white placeholder-white focus:outline-none input-field" type="text" placeholder="Enter Platform">
+                    <i class="fas fa-user absolute right-3 top-3 text-white"></i>
+                </div>
+            </div>
+            <button id="submitBtn" type="submit" class="w-full py-2 rounded-full bg-gray-500 text-gray-300 font-bold cursor-not-allowed" disabled>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll("#transactionForm input");
+        const submitBtn = document.getElementById("submitBtn");
+        const formContainer = document.getElementById("formContainer");
+        const formTexts = document.querySelectorAll('.form-text');
+
+        // Function to check if all inputs are filled
+        function checkInputs() {
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (input.value.trim() === "") {
+                    allFilled = false;
+                    input.classList.remove('valid');
+                } else {
+                    input.classList.add('valid');
+                }
+            });
+            // Only apply the valid class if all required fields are filled
+            if (allFilled) {
+                inputs.forEach(input => input.classList.add('valid'));
+                formContainer.classList.add('valid'); // Add valid class to form container
+                formTexts.forEach(text => text.classList.add('valid')); // Change text color to golden
+            } else {
+                inputs.forEach(input => input.classList.remove('valid'));
+                formContainer.classList.remove('valid'); // Remove valid class from form container
+                formTexts.forEach(text => text.classList.remove('valid')); // Reset text color
+            }
+            submitBtn.disabled = !allFilled; // Enable or disable the button
+            submitBtn.classList.toggle("valid", allFilled);
+        }
+
+        // Add event listener to all inputs
+        inputs.forEach(input => {
+            input.addEventListener("input", checkInputs);
+        });
+
+        // Initial check
+        checkInputs();
+
+        document.getElementById('transactionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get input values
+            const recipient = document.getElementById('recipient').value.trim();
+            const transactionId = document.getElementById('transactionId').value.trim();
+            const amount = parseFloat(document.getElementById('amount').value);
+            const oldBalance = parseFloat(document.getElementById('oldBalance').value);
+            const newBalance = parseFloat(document.getElementById('newBalance').value);
+            const platform = document.getElementById('platform').value.trim();
+
+            // Check conditions in form input order
+            if (
+                recipient === 'john' &&
+                transactionId === 't1' &&
+                amount === 51000 &&
+                oldBalance === 120000 &&
+                newBalance === 171000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'alice' &&
+                transactionId === 't2' &&
+                amount === 25000 &&
+                oldBalance === 50000 &&
+                newBalance === 75000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'willam' &&
+                transactionId === 't3' &&
+                amount === 10000 &&
+                oldBalance === 50000 &&
+                newBalance === 60000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'cris' &&
+                transactionId === 't4' &&
+                amount === 25000 &&
+                oldBalance === 50000 &&
+                newBalance === 75000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'james' &&
+                transactionId === 't5' &&
+                amount === 47000 &&
+                oldBalance === 100000 &&
+                newBalance === 147000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'susan' &&
+                transactionId === 't6' &&
+                amount === 37000 &&
+                oldBalance === 80000 &&
+                newBalance === 117000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'roger' &&
+                transactionId === 't7' &&
+                amount === 56000 &&
+                oldBalance === 200000 &&
+                newBalance === 256000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'michael' &&
+                transactionId === 't8' &&
+                amount === 60000 &&
+                oldBalance === 130000 &&
+                newBalance === 190000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'lucy' &&
+                transactionId === 't9' &&
+                amount === 23000 &&
+                oldBalance === 54000 &&
+                newBalance === 77000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'rachel' &&
+                transactionId === 't10' &&
+                amount === 31000 &&
+                oldBalance === 70000 &&
+                newBalance === 101000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'oliver' &&
+                transactionId === 't11' &&
+                amount === 42000 &&
+                oldBalance === 90000 &&
+                newBalance === 132000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'lily' &&
+                transactionId === 't12' &&
+                amount === 20000 &&
+                oldBalance === 60000 &&
+                newBalance === 80000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'jack' &&
+                transactionId === 't13' &&
+                amount === 45000 &&
+                oldBalance === 110000 &&
+                newBalance === 155000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'nina' &&
+                transactionId === 't14' &&
+                amount === 52000 &&
+                oldBalance === 150000 &&
+                newBalance === 202000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'robert' &&
+                transactionId === 't15' &&
+                amount === 58000 &&
+                oldBalance === 130000 &&
+                newBalance === 188000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'grace' &&
+                transactionId === 't16' &&
+                amount === 65000 &&
+                oldBalance === 170000 &&
+                newBalance === 235000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'nancy' &&
+                transactionId === 't17' &&
+                amount === 33000 &&
+                oldBalance === 89000 &&
+                newBalance === 122000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'will' &&
+                transactionId === 't18' &&
+                amount === 46000 &&
+                oldBalance === 94000 &&
+                newBalance === 140000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'george' &&
+                transactionId === 't19' &&
+                amount === 51000 &&
+                oldBalance === 105000 &&
+                newBalance === 156000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'sophia' &&
+                transactionId === 't20' &&
+                amount === 23000 &&
+                oldBalance === 62000 &&
+                newBalance === 85000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'tom' &&
+                transactionId === 't21' &&
+                amount === 33000 &&
+                oldBalance === 82000 &&
+                newBalance === 115000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'victor' &&
+                transactionId === 't22' &&
+                amount === 50000 &&
+                oldBalance === 150000 &&
+                newBalance === 200000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'david' &&
+                transactionId === 't23' &&
+                amount === 35000 &&
+                oldBalance === 75000 &&
+                newBalance === 110000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'ella' &&
+                transactionId === 't24' &&
+                amount === 42000 &&
+                oldBalance === 91000 &&
+                newBalance === 133000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'mary' &&
+                transactionId === 't25' &&
+                amount === 62000 &&
+                oldBalance === 200000 &&
+                newBalance === 262000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'sandra' &&
+                transactionId === 't26' &&
+                amount === 47000 &&
+                oldBalance === 145000 &&
+                newBalance === 192000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'patricia' &&
+                transactionId === 't27' &&
+                amount === 51000 &&
+                oldBalance === 130000 &&
+                newBalance === 181000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'charles' &&
+                transactionId === 't28' &&
+                amount === 35000 &&
+                oldBalance === 95000 &&
+                newBalance === 130000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'linda' &&
+                transactionId === 't29' &&
+                amount === 62000 &&
+                oldBalance === 155000 &&
+                newBalance === 217000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'emily' &&
+                transactionId === 't30' &&
+                amount === 27000 &&
+                oldBalance === 70000 &&
+                newBalance === 97000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'paul' &&
+                transactionId === 't31' &&
+                amount === 43000 &&
+                oldBalance === 115000 &&
+                newBalance === 158000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'elizabeth' &&
+                transactionId === 't32' &&
+                amount === 56000 &&
+                oldBalance === 140000 &&
+                newBalance === 196000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'henry' &&
+                transactionId === 't33' &&
+                amount === 49000 &&
+                oldBalance === 120000 &&
+                newBalance === 169000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'betty' &&
+                transactionId === 't34' &&
+                amount === 31000 &&
+                oldBalance === 83000 &&
+                newBalance === 114000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'victoria' &&
+                transactionId === 't35' &&
+                amount === 42000 &&
+                oldBalance === 110000 &&
+                newBalance === 152000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'george' &&
+                transactionId === 't36' &&
+                amount === 38000 &&
+                oldBalance === 95000 &&
+                newBalance === 133000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'maggie' &&
+                transactionId === 't37' &&
+                amount === 27000 &&
+                oldBalance === 66000 &&
+                newBalance === 93000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'richard' &&
+                transactionId === 't38' &&
+                amount === 58000 &&
+                oldBalance === 150000 &&
+                newBalance === 208000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'ashley' &&
+                transactionId === 't39' &&
+                amount === 51000 &&
+                oldBalance === 125000 &&
+                newBalance === 176000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'betty' &&
+                transactionId === 't40' &&
+                amount === 23000 &&
+                oldBalance === 57000 &&
+                newBalance === 80000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'greg' &&
+                transactionId === 't41' &&
+                amount === 34000 &&
+                oldBalance === 90000 &&
+                newBalance === 124000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'ellen' &&
+                transactionId === 't42' &&
+                amount === 49000 &&
+                oldBalance === 110000 &&
+                newBalance === 159000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'maya' &&
+                transactionId === 't43' &&
+                amount === 28000 &&
+                oldBalance === 76000 &&
+                newBalance === 104000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'blake' &&
+                transactionId === 't44' &&
+                amount === 46000 &&
+                oldBalance === 120000 &&
+                newBalance === 166000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'brian' &&
+                transactionId === 't45' &&
+                amount === 37000 &&
+                oldBalance === 100000 &&
+                newBalance === 137000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'patrick' &&
+                transactionId === 't46' &&
+                amount === 59000 &&
+                oldBalance === 140000 &&
+                newBalance === 199000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'christopher' &&
+                transactionId === 't47' &&
+                amount === 53000 &&
+                oldBalance === 130000 &&
+                newBalance === 183000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'lucy' &&
+                transactionId === 't48' &&
+                amount === 38000 &&
+                oldBalance === 110000 &&
+                newBalance === 148000 &&
+                platform === 'phonepe'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'william' &&
+                transactionId === 't49' &&
+                amount === 25000 &&
+                oldBalance === 75000 &&
+                newBalance === 100000 &&
+                platform === 'paytm'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else if (
+                recipient === 'olivia' &&
+                transactionId === 't50' &&
+                amount === 22000 &&
+                oldBalance === 62000 &&
+                newBalance === 84000 &&
+                platform === 'googlepay'
+            ) {
+                window.location.href = `index5_valid-page.html?recipient=${recipient}&transactionId=${transactionId}&amount=${amount}&oldBalance=${oldBalance}&newBalance=${newBalance}&platform=${platform}`;
+            } else {
+                window.location.href = 'index6_invalid-page.html';
+            }
+        });
+    </script>
+</body>
+</html>
