@@ -4,7 +4,8 @@ The "UPI Fraud Mitigation with Machine Learning" project aims to leverage advanc
 
 **Project Structure**
 
-```upi-fraud-mitigation-with-machine-learning/
+```
+upi-fraud-mitigation-with-machine-learning/
 │
 ├── public/
 │   ├── index1_intro-page.html         # First HTML file for the front-end interface
