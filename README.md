@@ -36,10 +36,10 @@ upi-fraud-mitigation-with-machine-learning/
 └── LICENSE                           # Legal terms under which the project can be used, modified, or shared.               
 ```
 
-## Screenshots
+### Screenshots
 
 ### Intro Page
-![Intro Page](assets/intro-page.png "Introduction Page Design")
+![Intro Page](C:\Users\DELL\Documents\GitHub\reeshapkmr\Upi-fraud-mitigation-with-machine-learning\templates "Introduction Page Design")
 
 ### Login Page
 ![Login Page](assets/login-page.png "Login Page Design")
