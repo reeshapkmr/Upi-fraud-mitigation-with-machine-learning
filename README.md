@@ -39,9 +39,18 @@ upi-fraud-mitigation-with-machine-learning/
 ### Screenshots
 
 ### Intro Page
-![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/d07439964b5f3b198bb00ecac67a6b12be65b3f9/templates/UPI%20Fraud%20Mitigation%20Entry.png)
+![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Intro.png)
 
-![Intro Page]([templates ](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/tree/efe91fdbce44edd46b1b0e5e934a211f0f8b270e/templates)"Introduction Page Design")
+![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Login.png)
+
+![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Home.png)
+
+![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Entry.png)
+
+![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Valid.png)
+
+![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Invalid.png)
+
 
 ### Login Page
 ![Login Page](assets/login-page.png "Login Page Design")
