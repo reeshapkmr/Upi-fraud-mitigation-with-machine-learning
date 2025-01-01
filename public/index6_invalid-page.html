@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Mitigation Invalid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: url('../templates/index5.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-black">
+    <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-20 w-102 border-2 border-yellow-500"> <!-- Added border classes -->
+        <h2 class="text-4xl font-bold text-center mb-6"
+        style="
+        color: red;
+        text-shadow: 
+       -1px -1px 0 #f59e0b,
+        1px -1px 0 #f59e0b,
+       -1px 1px 0 #f59e0b,
+        1px 1px 0 #f59e0b;">Invalid Transaction! (Fraudulent)</h2>
+        <p class="text-2xl text-yellow-500">Unfortunately, your transaction could not be processed.</p>
+        <div class="mt-4">
+            <h2 class="text-2xl text-center text-yellow-500 font-semibold">Transaction Details:</h2>
+            <h2 class="text-yellow-500 font-semibold">.......................................................................................................................</h2>
+            <p class="text-1xl text-center text-yellow-500"><strong>Please check the details and try again.</strong></p> <!-- Changed to red -->
+            <h2 class="text-yellow-500 font-semibold">.......................................................................................................................</h2>
+        </div>
+        <div class="flex justify-center mt-6">
+            <a href="index4_entry-page.html" class="inline-block px-9 py-2 bg-white text-yellow-500 border-2 border-yellow-500 rounded-full hover:bg-gray-200">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

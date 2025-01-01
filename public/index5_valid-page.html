@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Mitigation Valid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: url('../templates/index5.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Times New Roman', serif; /* Changed to Times New Roman */
+        }
+        .text-green-500 {
+            color: #FFD700; /* Gold color */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-black">
+    <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-20 w-102 border-2 border-yellow-500"> <!-- Added golden border to the form -->
+        <h2 class="text-4xl font-bold text-center mb-6" 
+        style="
+        color: #04e758; /* Green-500 */
+        text-shadow: 
+       -1px -1px 0 #f59e0b,  /* Yellow-500 shadow for top-left */
+        1px -1px 0 #f59e0b,   /* Yellow-500 shadow for top-right */
+       -1px 1px 0 #f59e0b,   /* Yellow-500 shadow for bottom-left */
+        1px 1px 0 #f59e0b,    /* Yellow-500 shadow for bottom-right */
+        0 -1px 0 #f59e0b,     /* Yellow-500 shadow for top */
+        0 1px 0 #f59e0b,      /* Yellow-500 shadow for bottom */
+       -1px 0 0 #f59e0b,     /* Yellow-500 shadow for left */
+        1px 0 0 #f59e0b;      /* Yellow-500 shadow for right */">Valid Transaction! (Legitimate)</h2>
+        <p class="text-2xl text-yellow-500">Your transaction has been processed successfully.</p>
+        <div class="mt-4">
+            <h2 class="text-2xl text-center text-yellow-500 font-semibold">Transaction Details:</h2>
+            <h2 class="text-yellow-500 font-semibold">.......................................................................................................................</h2>
+            <p class="text-1xl text-center text-yellow-500"><strong>Recipient:</strong> <span id="recipientDisplay"></span></p>
+            <p class="text-1xl text-center text-yellow-500"><strong>TransactionId:</strong> <span id="transactionIdDisplay"></span></p>
+            <p class="text-1xl text-center text-yellow-500"><strong>Amount:</strong> <span id="amountDisplay"></span></p>
+            <p class="text-1xl text-center text-yellow-500"><strong>Old Balance:</strong> <span id="oldBalanceDisplay"></span></p>
+            <p class="text-1xl text-center text-yellow-500"><strong>New Balance:</strong> <span id="newBalanceDisplay"></span></p>
+            <p class="text-1xl text-center text-yellow-500"><strong>Platform:</strong> <span id="platformDisplay"></span></p>
+            <h2 class="text-yellow-500 font-semibold">.......................................................................................................................</h2>
+        </div>
+        <div class="flex justify-center mt-6">
+            <a href="index4_entry-page.html" class="inline-block px-9 py-2 bg-white text-yellow-500 border-2 border-yellow-500 rounded-full hover:bg-gray-200">Go Back</a> <!-- Updated button styles -->
+        </div>
+    </div>    
+    <script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipient = urlParams.get('recipient');
+        const transactionId = urlParams.get('transactionId');
+        const amount = urlParams.get('amount');
+        const oldBalance = urlParams.get('oldBalance');
+        const newBalance = urlParams.get('newBalance');
+        const platform = urlParams.get('platform');
+
+        // Display the transaction details
+        document.getElementById('recipientDisplay').textContent = recipient;
+        document.getElementById('transactionIdDisplay').textContent = transactionId;
+        document.getElementById('amountDisplay').textContent = `₹${amount}`;
+        document.getElementById('oldBalanceDisplay').textContent = `₹${oldBalance}`;
+        document.getElementById('newBalanceDisplay').textContent = `₹${newBalance}`;
+        document.getElementById('platformDisplay').textContent = platform;
+    </script>
+</body>
+</html>
