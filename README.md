@@ -39,7 +39,7 @@ upi-fraud-mitigation-with-machine-learning/
 ### Screenshots
 
 ### Intro Page
-![Intro Page](C:\Users\DELL\Documents\GitHub\reeshapkmr\Upi-fraud-mitigation-with-machine-learning\templates "Introduction Page Design")
+![Intro Page](templates "Introduction Page Design")
 
 ### Login Page
 ![Login Page](assets/login-page.png "Login Page Design")
