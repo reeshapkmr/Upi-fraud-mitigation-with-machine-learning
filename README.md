@@ -2,7 +2,7 @@
 
 UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with high accuracy.  The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.
 
-**Project Structure**
+### Project Structure:
 
 ```
 upi-fraud-mitigation-with-machine-learning/
@@ -36,23 +36,23 @@ upi-fraud-mitigation-with-machine-learning/
 └── LICENSE                           # Legal terms under which the project can be used, modified, or shared.               
 ```
 
-### Screenshots
+### Screenshots:
 
-### UPI Fraud Mitigation Intro(index1_intro-page.html)
+***UPI Fraud Mitigation Intro-page***
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Intro.png)
 
-### UPI Fraud Mitigation Login(index1_login-page.html)
+***UPI Fraud Mitigation Login-page***
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Login.png)
 
-### UPI Fraud Mitigation Home(index1_home-page.html)
+***UPI Fraud Mitigation Home-page***
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Home.png)
 
-### UPI Fraud Mitigation Entry(index1_entry-page.html)
+***UPI Fraud Mitigation Entry-page***
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Entry.png)
 
-### UPI Fraud Mitigation Valid(index1_valid-page.html)
+***UPI Fraud Mitigation Valid-page***
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Valid.png)
 
-### UPI Fraud Mitigation Invalid(index1_invalid-page.html)
+***UPI Fraud Mitigation Invalid-page***
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Invalid.png)
 
