@@ -1,4 +1,4 @@
-# UPI Fraud Mitigation With Machine Learning
+## UPI Fraud Mitigation With Machine Learning
 
 UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, fraudulent activities have become a significant challenge, putting users and financial institutions at risk. This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with high accuracy. By analyzing key transactional attributes like amount, frequency, location, and user behavior, the system identifies suspicious patterns and flags potential fraud in real time. The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.
 
