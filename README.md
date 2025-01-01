@@ -39,6 +39,8 @@ upi-fraud-mitigation-with-machine-learning/
 ### Screenshots
 
 ### Intro Page
+![image alt](image url)
+
 ![Intro Page]([templates ](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/tree/efe91fdbce44edd46b1b0e5e934a211f0f8b270e/templates)"Introduction Page Design")
 
 ### Login Page
