@@ -1,6 +1,4 @@
-## UPI Fraud Mitigation With Machine Learning 
-
-[Live Demo](https://upi-fraud-mitigation-with-ml.netlify.app/)
+## UPI Fraud Mitigation With Machine Learning ([Live Demo](https://upi-fraud-mitigation-with-ml.netlify.app/))
 
 UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with high accuracy. The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.
 
