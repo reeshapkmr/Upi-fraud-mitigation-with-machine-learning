@@ -1,6 +1,6 @@
-## UPI Fraud Mitigation With Machine Learning ([Live Demo](https://upi-fraud-mitigation-with-ml.netlify.app/))
+## UPI Fraud Mitigation With Machine Learning ([Live!](https://upi-fraud-mitigation-with-ml.netlify.app/))
 
-UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with high accuracy. The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.
+UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with a high accuracy. The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.
 
 ### Project Structure:
 
@@ -10,7 +10,7 @@ upi-fraud-mitigation-with-machine-learning/
 ├── public/
 │   ├── index1_intro-page.html       # Landing page introducing the project and its features.
 │   ├── index2_login-page.html       # User login page to authenticate access to the system.
-│   ├── index3_home-page.html        # Main user interface displaying system functionality and analytics.
+│   ├── index3_home-page.html        # Main user interface displaying system functionality & analytics.
 │   ├── index4_entry-page.html       # Page for entering transaction details to check for fraud.
 │   ├── index5_valid-page.html       # Confirmation page for transactions verified as legitimate.
 │   ├── index6_invalid-page.html     # Warning page for transactions identified as fraudulent.
@@ -26,14 +26,14 @@ upi-fraud-mitigation-with-machine-learning/
 │
 ├── scripts/
 │   ├── python.ipnyb                 # Jupyter Notebook for implementing fraud detection algorithms.
-│   └── resultcheck.ipnyb            # Notebook for validating, visualizing the results of the fraud detection model.
+│   └── resultcheck.ipnyb            # Notebook for validating the results of fraud detection model.
 │
 ├── data/
-│   └── upitxnsdata.csv              # UPI transaction dataset for training, testing, and evaluating the ML model.
+│   └── upitxnsdata.csv              # UPI transaction dataset for training, test, evaluate ML model.
 │
-├── README.md                        # Comprehensive guide to understanding, setting up, and using the project.
+├── README.md                        # Comprehensive guide to understanding, setting up the project.
 ├── .gitignore                       # Specifies files and directories to exclude from the repository.
-└── LICENSE                          # Legal terms under which the project can be used, modified, or shared.               
+└── LICENSE                          # Legal terms under which the project can be used, or modified.               
 ```
 
 ***UPI Fraud Mitigation Intro-page***
