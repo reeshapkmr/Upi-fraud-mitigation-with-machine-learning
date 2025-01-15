@@ -44,20 +44,28 @@ upi-fraud-mitigation-with-machine-learning/
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Login.png)
 
-****UPI Fraud Mitigation Home-page****
+**UPI Fraud Mitigation Home-page**
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Home.png)
 
-***UPI Fraud Mitigation Entry-page***
+**UPI Fraud Mitigation Entry-page**
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Entry.png)
 
-***UPI Fraud Mitigation Valid-page***
+**UPI Fraud Mitigation Valid-page**
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Valid.png)
 
-***UPI Fraud Mitigation Invalid-page***
+**UPI Fraud Mitigation Invalid-page**
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Invalid.png)
 
 ### Technologies Used:
+
+#### 1. Programming Languages
+**Python:** ***For data preprocessing, machine learning model development, and application logic.***
+
+#### 2. Web Development
+**HTML/CSS/JavaScript:** ***For the front-end user interface.***
+**Flask or Django:** ***To create a web-based interface or API.***
+
