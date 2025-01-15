@@ -36,15 +36,15 @@ upi-fraud-mitigation-with-machine-learning/
 └── LICENSE                          # Legal terms under which the project can be used, or modified.               
 ```
 
-***UPI Fraud Mitigation Intro-page***
+**UPI Fraud Mitigation Intro-page**
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Intro.png)
 
-***UPI Fraud Mitigation Login-page***
+**UPI Fraud Mitigation Login-page**
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Login.png)
 
-***UPI Fraud Mitigation Home-page***
+****UPI Fraud Mitigation Home-page****
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Home.png)
 
@@ -59,3 +59,5 @@ upi-fraud-mitigation-with-machine-learning/
 ***UPI Fraud Mitigation Invalid-page***
 
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Invalid.png)
+
+### Technologies Used:
