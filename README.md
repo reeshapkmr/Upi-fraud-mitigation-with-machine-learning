@@ -84,10 +84,10 @@ upi-fraud-mitigation-with-machine-learning/
 - Install the required Python packages to ensure that all dependencies are met and the project operates smoothly without issues. This step is crucial for running the machine learning models and web interface.
 
 7. **Ensure Data File is Present:** 
-- Place the [upi_txnsdata.csv](upi_txnsdata.csv)upi_txnsdata.csv file in the main project directory so the application can access and utilize the transaction data for training the machine learning model and running the fraud detection system.
+- Place the ***upi_txnsdata.csv*** file in the main project directory so the application can access and utilize the transaction data for training the machine learning model and running the fraud detection system.
 
 5. **Run Jupyter Notebooks:**
-- Open the python.ipynb and resultcheck.ipynb files in your browser through Jupyter Notebook. Execute all code cells in these notebooks to run the machine learning model and evaluate its effectiveness in detecting fraud.
+- Open the ***python.ipynb*** and ***resultcheck.ipynb*** files in your browser through Jupyter Notebook. Execute all code cells in these notebooks to run the machine learning model and evaluate its effectiveness in detecting fraud.
 
 6. **Run the Web Interface:**
 - Method 1: Open HTML Files Directly: Navigate to the public folder and simply open the HTML files in your browser to quickly access and view the web interface without requiring any server setup or configuration steps.
@@ -95,7 +95,7 @@ upi-fraud-mitigation-with-machine-learning/
 - Method 2: Using a Simple HTTP Server: Run a simple HTTP server from the public folder to serve the HTML files and access the web interface in your browser, enabling proper viewing of all relative links and resources.
 
 7. **Important Security Note:**
-- Login Credentials: The login credentials are stored in the logincredentials_info.txt file, which can be accessed to log in to the web interface, though it's important to note that this is insecure for real applications.
+- Login Credentials: The login credentials are stored in the ***logincredentials_info.txt*** file, which can be accessed to log in to the web interface, though it's important to note that this is insecure for real applications.
 
 **File Descriptions**
 - ***public/index*.html**: Web interface HTML/CSS/JavaScript files.
