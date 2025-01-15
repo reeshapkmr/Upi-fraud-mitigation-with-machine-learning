@@ -105,12 +105,12 @@ upi-fraud-mitigation-with-machine-learning/
 - ***resultcheck.ipynb***: Model evaluation code.
 - ***upi_txnsdata.csv***: Dataset for training and testing.
 
-## System Requirements:
+### System Requirements:
 
 **Operating System:**
 - Windows 10 or later
 - macOS 10.14 or later
-- Linux (Ubuntu 18.04 or later recommended)
+- Linux (Ubuntu 18.04 or later)
 
 **Hardware:**
 - Processor: Intel Core i5 or better
@@ -133,7 +133,7 @@ upi-fraud-mitigation-with-machine-learning/
 - Git (for cloning the repository)
 - Virtual environment tool (such as venv or virtualenv)
 
-**Additional Tools (Optional):**
+**Additional Tools:**
 - Docker: For containerizing the application
 - VSCode or PyCharm: For coding and running the scripts
 
@@ -146,3 +146,12 @@ upi-fraud-mitigation-with-machine-learning/
 5. **Data Preprocessing:** Cleans and transforms UPI transaction data to prepare it for model training and analysis.
 6. **Web Interface for Demonstration:** Provides a simple web interface to showcase the fraud detection system and visualize results.
 7. **Improving Security Protocols:** Boosts UPI security by using machine learning to detect and block fraudulent transactions.
+
+## Contact Information
+
+- **Project Maintainer:** Reeshap Kumar
+- **Email:** reeshap.kumar1@gmail.com
+- **GitHub:** [https://github.com/reeshapkmr](https://github.com/reeshapkmr)
+- **LinkedIn:** [https://www.linkedin.com/in/reeshapkumar](https://www.linkedin.com/in/reeshapkumar)
+- **Twitter:** [@reeshap_kumar](https://twitter.com/reeshap_kumar)
+
