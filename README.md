@@ -1,6 +1,6 @@
 ## UPI Fraud Mitigation With Machine Learning {[L@unch Live!](https://upi-fraud-mitigation-with-ml.netlify.app/)}
 
-##### ***UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with a high accuracy. The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.***
+####### UPI Fraud Mitigation with Machine Learning is an innovative project aimed at safeguarding digital transactions in the growing Unified Payments Interface (UPI) ecosystem. With the increasing adoption of UPI, This project harnesses the power of machine learning to create a secure, intelligent system capable of detecting fraudulent transactions with a high accuracy. The project features a dynamic web interface for users to input transaction details and receive instant feedback, complemented by visual reports on transaction trends and fraud patterns.
 
 ### Project Structure:
 
@@ -61,7 +61,7 @@ upi-fraud-mitigation-with-machine-learning/
 ![image alt](https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning/blob/bd635dc3a9bc7a37679bddc3943bae1ba6ed1a54/templates/UPI%20Fraud%20Mitigation%20Invalid.png)
 
 ### Technologies Used in UPI Fraud Mitigation:
-```
+
 ***1. Programming Languages:Python***
 ***2. Web Development: HTML/CSS/JavaScript/Flask(or)Django***
 ***3. Machine Learning Frameworks: Scikit-learn/TensorFlow*** 
@@ -71,4 +71,4 @@ upi-fraud-mitigation-with-machine-learning/
 ***7. Data Sources:***
 Real-time or simulated UPI transaction data.
 Fraud datasets from sources like Kaggle or custom-labeled datasets.
-```
+
