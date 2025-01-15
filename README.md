@@ -144,8 +144,8 @@ upi-fraud-mitigation-with-machine-learning/
 3. **Real-time Transaction Monitoring:** Monitors UPI transactions in real-time, flag fraudulent activities instantly.
 4. **Behavioral Analysis:** Analyzes user transaction patterns to identify deviations that indicate fraud activities.
 5. **Data Preprocessing:** Cleans and transforms UPI transaction data to prepare it for model training and analysis.
-6. **Web Interface for Demonstration:** Provides a simple web interface to showcase the fraud detection system results.
-7. **Improving Security Protocols:** Boosts UPI security by using machine learning to detect & block fraud transactions.
+6. **Web Interface for Demonstration:** Provides simple web interface to showcase the fraud detection system results.
+7. **Improving Security Protocols:** Boosts UPI security using machine learning to detect & block fraud transactions.
 
 ### Contact Information:
 
