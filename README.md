@@ -105,6 +105,38 @@ upi-fraud-mitigation-with-machine-learning/
 - ***resultcheck.ipynb***: Model evaluation code.
 - ***upi_txnsdata.csv***: Dataset for training and testing.
 
+## System Requirements:
+
+**Operating System:**
+- Windows 10 or later
+- macOS 10.14 or later
+- Linux (Ubuntu 18.04 or later recommended)
+
+**Hardware:**
+- Processor: Intel Core i5 or better
+- Memory: 8 GB RAM minimum (16 GB recommended)
+- Storage: At least 10 GB of free space
+
+**Software:**
+- Python 3.6 or higher
+- Jupyter Notebook
+- Libraries (installed via requirements.txt):
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - Flask (for web interface)
+  - Docker (if deploying using Docker)
+
+**Dependencies:**
+- Git (for cloning the repository)
+- Virtual environment tool (such as venv or virtualenv)
+
+**Additional Tools (Optional):**
+- Docker: For containerizing the application
+- VSCode or PyCharm: For coding and running the scripts
+
 ### Features of UPI Fraud Mitigation with Machine Learning:
 
 1. **Anomaly Detection:** Uses machine learning to flag unusual UPI transactions and identify potential fraudulent activities..
