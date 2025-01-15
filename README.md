@@ -149,6 +149,7 @@ upi-fraud-mitigation-with-machine-learning/
 
 ### Contact Information
 
-- **Username:** reeshapkmr **Name:** REESHAP KUMAR.
+- **Name:** REESHAP KUMAR.
 - **Email:** [reeshap.kumar1@gmail.com](mailto:reeshap.kumar1@gmail.com)
 - **GitHub:** [https://github.com/reeshapkmr](https://github.com/reeshapkmr)
+- **Username:** reeshapkmr.
