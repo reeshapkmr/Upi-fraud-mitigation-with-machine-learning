@@ -90,9 +90,9 @@ upi-fraud-mitigation-with-machine-learning/
 - Open the ***python.ipynb*** and ***resultcheck.ipynb*** files in your browser through Jupyter Notebook. Execute all code cells in these notebooks to run the machine learning model and evaluate its effectiveness in detecting fraud.
 
 6. **Run the Web Interface:**
-- Method 1: Open HTML Files Directly: Navigate to the public folder and simply open the HTML files in your browser to quickly access and view the web interface without requiring any server setup or configuration steps.
+- ***Method 1:*** Open HTML Files Directly: Navigate to the public folder and simply open the HTML files in your browser to quickly access and view the web interface without requiring any server setup or configuration steps.
 
-- Method 2: Using a Simple HTTP Server: Run a simple HTTP server from the public folder to serve the HTML files and access the web interface in your browser, enabling proper viewing of all relative links and resources.
+- ***Method 2:*** Using a Simple HTTP Server: Run a simple HTTP server from the public folder to serve the HTML files and access the web interface in your browser, enabling proper viewing of all relative links and resources.
 
 7. **Important Security Note:**
 - Login Credentials: The login credentials are stored in the ***logincredentials_info.txt*** file, which can be accessed to log in to the web interface, though it's important to note that this is insecure for real applications.
@@ -139,15 +139,15 @@ upi-fraud-mitigation-with-machine-learning/
 
 ### Features of UPI Fraud Mitigation with Machine Learning:
 
-1. **Anomaly Detection:** Uses machine learning to flag unusual UPI transactions and identify potential fraudulent activities..
-2. **Training the Model:** Trains machine learning models on UPI transaction data to recognize patterns and detect fraud.
-3. **Real-time Transaction Monitoring:** Monitors UPI transactions in real-time, flagging potential fraudulent activities instantly.
-4. **Behavioral Analysis:** Analyzes user transaction patterns to identify deviations that could indicate fraudulent activities.
+1. **Anomaly Detection:** Uses machine learning to flag unusual UPI transactions and identify fraudulent activities.
+2. **Training the Model:** Trains machine learning models on UPI transaction to recognize patterns and detect fraud.
+3. **Real-time Transaction Monitoring:** Monitors UPI transactions in real-time, flag fraudulent activities instantly.
+4. **Behavioral Analysis:** Analyzes user transaction patterns to identify deviations that indicate fraud activities.
 5. **Data Preprocessing:** Cleans and transforms UPI transaction data to prepare it for model training and analysis.
-6. **Web Interface for Demonstration:** Provides a simple web interface to showcase the fraud detection system and visualize results.
-7. **Improving Security Protocols:** Boosts UPI security by using machine learning to detect and block fraudulent transactions.
+6. **Web Interface for Demonstration:** Provides a simple web interface to showcase the fraud detection system results.
+7. **Improving Security Protocols:** Boosts UPI security by using machine learning to detect & block fraud transactions.
 
-### Contact Information
+### Contact Information:
 
 - **Name:** REESHAP KUMAR.
 - **Email:** [reeshap.kumar1@gmail.com](mailto:reeshap.kumar1@gmail.com)
