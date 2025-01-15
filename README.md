@@ -62,12 +62,12 @@ upi-fraud-mitigation-with-machine-learning/
 
 ### Technologies Used in UPI Fraud Mitigation:
 
-***1. Programming Languages:*** ***Python***
-***2. Web Development:*** ***HTML/CSS/JavaScript/Flask(or)Django***
-***3. Machine Learning Frameworks:*** ***Scikit-learn/TensorFlow*** 
-***4. Machine Learning Libraries:*** ***Pandas/NumPy:***
-***5. Databases:*** ***MongoDB/MySQL/SQLite:***
-***6. APIs/Testing:*** ***UPI API Integration/PyTest/UnitTest:***
+***1. Programming Languages:Python***
+***2. Web Development: HTML/CSS/JavaScript/Flask(or)Django***
+***3. Machine Learning Frameworks: Scikit-learn/TensorFlow*** 
+***4. Machine Learning Libraries: Pandas/NumPy:***
+***5. Databases: MongoDB/MySQL/SQLite:***
+***6. APIs/Testing: UPI API Integration/PyTest/UnitTest:***
 ***7. Data Sources:***
 Real-time or simulated UPI transaction data.
 Fraud datasets from sources like Kaggle or custom-labeled datasets.
