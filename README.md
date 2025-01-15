@@ -105,8 +105,12 @@ upi-fraud-mitigation-with-machine-learning/
 - ***resultcheck.ipynb***: Model evaluation code.
 - ***upi_txnsdata.csv***: Dataset for training and testing.
 
+### Features of UPI Fraud Mitigation with Machine Learning:
 
-
-  
-
-
+1. **Anomaly Detection:** Uses machine learning to flag unusual UPI transactions and identify potential fraudulent activities..
+2. **Training the Model:** Trains machine learning models on UPI transaction data to recognize patterns and detect fraud.
+3. **Real-time Transaction Monitoring:** Monitors UPI transactions in real-time, flagging potential fraudulent activities instantly.
+4. **Behavioral Analysis:** Analyzes user transaction patterns to identify deviations that could indicate fraudulent activities.
+5. **Data Preprocessing:** Cleans and transforms UPI transaction data to prepare it for model training and analysis.
+6. **Web Interface for Demonstration:** Provides a simple web interface to showcase the fraud detection system and visualize results.
+7. **Improving Security Protocols:** Boosts UPI security by using machine learning to detect and block fraudulent transactions.
