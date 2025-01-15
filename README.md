@@ -75,50 +75,26 @@ upi-fraud-mitigation-with-machine-learning/
 ### Installation and Usage Instructions:
 
 1. **Clone the Repository:**
-```
-git clone https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning.git
-cd Upi-fraud-mitigation-with-machine-learning
-```
 2. **Set Up a Python Virtual Environment:**
-```
-python3 -m venv venv     # Create virtual environment
-source venv/bin/activate # Activate (Linux/macOS)
-venv\Scripts\activate    # Activate (Windows)
-```
 3. **Install Required Libraries:**
-```
-pip install -r requirements.txt
-```
 4. **Ensure Data File is Present:** 
 - upi_txnsdata.csv should be in the main directory.
-
 5. **Run Jupyter Notebooks:**
-```
-jupyter notebook
-```
 - In the web browser, open python.ipynb and resultcheck.ipynb, and execute the cells.
-  
 6. **Run the Web Interface:**
 - Method 1: Open HTML Files Directly: 
 Navigate to the public folder and open the HTML files in your web browser.
 - Method 2: Using a Simple HTTP Server:
-```
-cd Upi-fraud-mitigation-with-machine-learning/public
-python3 -m http.server   # For Python 3
-python -m SimpleHTTPServer   # For Python 2
-```
-- Open http://localhost:8000 in your web browser.
-
 7. **Important Security Note:**
 - Login Credentials: Found in logincredentials_info.txt.
 
 **File Descriptions**
-- public/index*.html: Web interface HTML/CSS/JavaScript files.
-- public/logincredentials_info.txt: Contains login credentials.
-- templates: Folder for HTML templates like logos and images.
-- python.ipynb: Core machine learning model code.
-- resultcheck.ipynb: Model evaluation code.
-- upi_txnsdata.csv: Dataset for training and testing.
+- ***public/index*.html***: Web interface HTML/CSS/JavaScript files.
+- ***public/logincredentials_info.txt***: Contains login credentials.
+- ***templates***: Folder for HTML templates like logos and images.
+- ***python.ipynb***: Core machine learning model code.
+- ***resultcheck.ipynb***: Model evaluation code.
+- ***upi_txnsdata.csv***: Dataset for training and testing.
 
 
 
