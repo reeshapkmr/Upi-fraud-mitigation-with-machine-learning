@@ -77,13 +77,13 @@ upi-fraud-mitigation-with-machine-learning/
 1. **Clone the Repository:**
 - Download the UPI Fraud Mitigation with Machine Learning project from GitHub to obtain all the essential files, including code, datasets, and configurations, necessary to set up and run the system effectively on your machine.
 
-3. **Set Up a Python Virtual Environment:**
+2. **Set Up a Python Virtual Environment:**
 - Create a dedicated virtual environment to isolate and manage the project's dependencies, ensuring there are no conflicts with other Python projects or system-wide packages while maintaining project-specific configurations.
 
-5. **Install Required Libraries:**
+3. **Install Required Libraries:**
 - Install the required Python packages to ensure that all dependencies are met and the project operates smoothly without issues. This step is crucial for running the machine learning models and web interface.
 
-7. **Ensure Data File is Present:** 
+4. **Ensure Data File is Present:** 
 - Place the ***upi_txnsdata.csv*** file in the main project directory so the application can access and utilize the transaction data for training the machine learning model and running the fraud detection system.
 
 5. **Run Jupyter Notebooks:**
