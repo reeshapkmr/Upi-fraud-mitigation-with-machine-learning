@@ -84,7 +84,7 @@ upi-fraud-mitigation-with-machine-learning/
 - Install the required Python packages to ensure that all dependencies are met and the project operates smoothly without issues. This step is crucial for running the machine learning models and web interface.
 
 7. **Ensure Data File is Present:** 
-- Place the <u>upi_txnsdata.csv</u> file in the main project directory so the application can access and utilize the transaction data for training the machine learning model and running the fraud detection system.
+- Place the [upi_txnsdata.csv](upi_txnsdata.csv)upi_txnsdata.csv file in the main project directory so the application can access and utilize the transaction data for training the machine learning model and running the fraud detection system.
 
 5. **Run Jupyter Notebooks:**
 - Open the python.ipynb and resultcheck.ipynb files in your browser through Jupyter Notebook. Execute all code cells in these notebooks to run the machine learning model and evaluate its effectiveness in detecting fraud.
