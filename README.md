@@ -62,41 +62,43 @@ upi-fraud-mitigation-with-machine-learning/
 
 ### Technologies Used:
 
-1.**Programming Languages:** Python.  
-2.**Web Development:** HTML, CSS, JavaScript, Flask(or)Django.  
-3.**Machine Learning Frameworks:** Scikit-learn, TensorFlow.  
-4.**Machine Learning Libraries:** Pandas, NumPy.  
-5.**Databases:** MongoDB, MySQL, SQLite.  
-6.**APIs/Testing:** UPI API Integration, PyTest, UnitTest.  
-7.**Data Sources:**  
+1. **Programming Languages:** Python.  
+2. **Web Development:** HTML, CSS, JavaScript, Flask(or)Django.  
+3. **Machine Learning Frameworks:** Scikit-learn, TensorFlow.  
+4. **Machine Learning Libraries:** Pandas, NumPy.  
+5. **Databases:** MongoDB, MySQL, SQLite.  
+6. **APIs/Testing:** UPI API Integration, PyTest, UnitTest.  
+7. **Data Sources:**  
 - Real-time or simulated UPI transaction data.  
 - Fraud datasets from sources like Kaggle or custom-labeled datasets.
 
 ### Installation and Usage Instructions:
 
-1.**Clone the Repository:**
+1. **Clone the Repository:**
 ```
 git clone https://github.com/reeshapkmr/Upi-fraud-mitigation-with-machine-learning.git
 cd Upi-fraud-mitigation-with-machine-learning
 ```
-2.**Set Up a Python Virtual Environment:**
+2. **Set Up a Python Virtual Environment:**
 ```
 python3 -m venv venv     # Create virtual environment
 source venv/bin/activate # Activate (Linux/macOS)
 venv\Scripts\activate    # Activate (Windows)
 ```
-3.**Install Required Libraries:**
+3. **Install Required Libraries:**
 ```
 pip install -r requirements.txt
 ```
-4.**Ensure Data File is Present:** 
+4. **Ensure Data File is Present:** 
 - upi_txnsdata.csv should be in the main directory.
-5.**Run Jupyter Notebooks:**
+
+5. **Run Jupyter Notebooks:**
 ```
 jupyter notebook
 ```
 - In the web browser, open python.ipynb and resultcheck.ipynb, and execute the cells.
-6.**Run the Web Interface:**
+  
+6. **Run the Web Interface:**
 - Method 1: Open HTML Files Directly: 
 Navigate to the public folder and open the HTML files in your web browser.
 - Method 2: Using a Simple HTTP Server:
@@ -106,8 +108,10 @@ python3 -m http.server   # For Python 3
 python -m SimpleHTTPServer   # For Python 2
 ```
 - Open http://localhost:8000 in your web browser.
-7.**Important Security Note:**
+
+7. **Important Security Note:**
 - Login Credentials: Found in logincredentials_info.txt.
+
 **File Descriptions**
 - public/index*.html: Web interface HTML/CSS/JavaScript files.
 - public/logincredentials_info.txt: Contains login credentials.
