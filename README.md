@@ -147,11 +147,8 @@ upi-fraud-mitigation-with-machine-learning/
 6. **Web Interface for Demonstration:** Provides a simple web interface to showcase the fraud detection system and visualize results.
 7. **Improving Security Protocols:** Boosts UPI security by using machine learning to detect and block fraudulent transactions.
 
-## Contact Information
+### Contact Information
 
-- **Project Maintainer:** Reeshap Kumar
-- **Email:** reeshap.kumar1@gmail.com
+- **Username:** reeshapkmr
+- **Email:** [reeshap.kumar1@gmail.com](reeshap.kumar1@gmail.com)
 - **GitHub:** [https://github.com/reeshapkmr](https://github.com/reeshapkmr)
-- **LinkedIn:** [https://www.linkedin.com/in/reeshapkumar](https://www.linkedin.com/in/reeshapkumar)
-- **Twitter:** [@reeshap_kumar](https://twitter.com/reeshap_kumar)
-
